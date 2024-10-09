@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lora:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lora', serif; */
+}
+
+nav {
+    background-color: #1d83dd;
+    color: wheat;
+    font-weight: 600;
+    height: 44px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    padding: 7px 0px 0 30px;
+    font-size: 23px;
+}
+
+/* main game designer */
+
+#gameContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+#gameInfo h2 {
+    font-size:34px;
+    color: #2e6899;
+    font-weight: 600;
+}
+
+#container {
+    margin-top: 35px;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+
+.box {
+    border: solid 2px blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: rgb(239, 245, 243);
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    position: relative;
+    top: 3rem;
+   right:12rem;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 2px 22px;
+    background-color: #9c8e9d;
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 26px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: #907392;
+}
+
+#gameInfo {
+    margin: 115px 11px 0 76px;
+}
+
+#info {
+    font-size: 39px;
+    font-weight: 600;
+    color: #7d684e;
+}
+
+#imgbox img {
+    /* height: 111px; */
+    width:0;
+    transition: width 1s ease-in-out;
+    position: relative;
+    left: 12rem;
+    bottom: 3rem;
+}
+
+/* MIDIAQUERY APLY */
+
+@media screen and (max-width: 832px) {
+    body {
+      /* background-color: lightgreen; */
+    }
+
+    #container{
+        margin-top: -3px;
+            grid-template-rows: repeat(3, 15vw);
+            grid-template-columns: repeat(3, 13vw);
+         }
+
+        #gameInfo{
+        margin: 30px 11px 0 0px;
+        text-align: center;
+    }
+
+    #gameInfo div{
+        margin-left:11px;
+    }
+
+    #reset{
+        top: 0rem;
+right: 2rem;
+    }
+    
+    #imgbox img{
+        width: 4rem;
+        left: 0rem;
+        top: 5px;
+    }
+
+    #info {
+        font-size:2rem;
+    }
+
+    #gameContainer{
+        flex-direction: column;
+        place-items: center;
+    }
+
+    #gameInfo h2{
+        font-size:26px;
+    }
+}
